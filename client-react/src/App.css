@@ -1,4 +1,4 @@
-
+/* write something different */
 
 /* Portrait and Landscape */
 @media only screen
@@ -84,10 +84,7 @@ and (min-resolution: 192dpi) {
 text-align: center;  
 } */
 
-.center {
-  text-align: center; 
-   
-}
+
 
 /* ul {
   list-style-type: none;
