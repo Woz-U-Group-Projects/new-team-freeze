@@ -1,1 +1,1 @@
-# new-team-freeze
+Team Freeze Final Project
