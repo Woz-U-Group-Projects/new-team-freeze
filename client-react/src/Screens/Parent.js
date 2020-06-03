@@ -56,7 +56,7 @@ class Parent extends React.Component {
                 <div className="center">
 
                     <h2>Parent Page</h2>
-                    <h3>Welcome to The School Lesson Tracking Portal</h3>
+                    <h3>Welcome to At-Home Learning</h3>
                 </div>
             </div>
 
