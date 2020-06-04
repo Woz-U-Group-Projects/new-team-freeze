@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from "axios";
 import {
-  BrowserRouter as Router 
-  //Link
+  // BrowserRouter as Router ,
+  // Link
   // Route 
 } from "react-router-dom";
 
@@ -37,7 +37,7 @@ class Login extends React.Component {
     return (
 
       <div className="container">
-        <Router>
+        {/* <Router>
         <ul className="header" >
           {/* <li>
             <Link to="/">Home</Link>
@@ -50,11 +50,11 @@ class Login extends React.Component {
           </li> */}
           {/* <li>
             <Link to="/">Log Off</Link>
-          </li> */}
+          </li> 
         </ul>
-        </Router>
+          </Router>*/}
 
-        {/* <div className="center">
+         {/* <div className="center"> 
             if (!this.props.token || this.props.token === "") {
 
               <div>
@@ -72,7 +72,7 @@ class Login extends React.Component {
                 </div>
               </div>
 
-            } else {(<div>Logged In</div>)} */}
+            } else {(<div>Logged In</div>)}  */}
       </div>
 
 
