@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from './Screens/Home'
 import Login from './Screens/Login'
-import Registration from './Screens/Registration'
+import Register from './Screens/Register'
 import Teacher from './Screens/Teacher'
 import CreateLesson from './Screens/CreateLesson'
 import CurrentLessonPlan from './Screens/CurrentLessonPlan'
@@ -70,7 +70,7 @@ class App extends React.Component {
         <Router>
           <Route exact path='/' component={Home} />
           <Route path='/Login' component={Login} />
-          <Route path='/Registration' component={Registration} />
+          <Route path='/Register' component={Register} />
           <Route path='/Teacher' component={Teacher} />
           <Route path='/CreateLesson' component={CreateLesson} />
           <Route path='/CurrentLessonPlan' component={CurrentLessonPlan} />

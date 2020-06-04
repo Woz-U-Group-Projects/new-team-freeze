@@ -36,7 +36,7 @@ class Home extends React.Component {
     };
 
     register() {
-        window.location.href = "./Registration";
+        window.location.href = "./Register";
     }
 
 
@@ -69,22 +69,22 @@ class Home extends React.Component {
                             <div className="col-sm-4 offset-sm-4">
 
                                 <h2 className="text-center">Home</h2>
-                                <p class="text-center">Welcome to the At Home Learning  portal</p>
+                                <p className="text-center">Welcome to the At Home Learning  portal</p>
 
 
                                 <div className="form-group-row" >
                                     {/* <div style={{ color: "red" }}>{(this.props.error ? this.props.error : '')}</div> */}
                                     <div className="form-group row">
                                         {/* <label htmlFor="username">Username:</label> */}
-                                        <input type="text" class="form-control" id="username" placeholder="User Name" name="username" onChange={this.props.onUsernameChange} />
+                                        <input type="text" className="form-control" id="username" placeholder="User Name" name="username" onChange={this.props.onUsernameChange} />
                                     </div>
                                     <div className="form-group row">
                                         {/* <label htmlFor="password">Password:</label> */}
-                                        <input type="password" class="form-control" id="password" placeholder="password" name="password" onChange={this.props.onPasswordChange} />
+                                        <input type="password" className="form-control" id="password" placeholder="password" name="password" onChange={this.props.onPasswordChange} />
                                     </div>
                                     <div className="text-center">
-                                        <button class="btn btn-primary btn-lg" onClick={this.props.onLogin}>Submit</button>
-                                        <button class="btn btn-secondary" onClick={this.register}>Register</button>
+                                        <button className="btn btn-primary btn-lg" onClick={this.props.onLogin}>Submit</button>
+                                        <button className="btn btn-secondary" onClick={this.register}>Register</button>
                                     </div>
                                 </div>
                             </div>
