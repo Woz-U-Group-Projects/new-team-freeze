@@ -45,15 +45,29 @@ class Home extends React.Component {
             return (
                 <div className="container" >
                     <ul >
-                        
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/Teacher">Teacher</Link>
+                        </li>
+                        <li>
+                            <Link to="/Student">Student</Link>
+                        </li>
+                        <li>
+                            <Link to="/Parent">Parent</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Log Off</Link>
+                        </li>
                     </ul>
                     <div className="container ">
                         <div className="row">
                             <div className="col-sm-4 offset-sm-4">
-                                
+
                                 <h2 className="text-center">Home</h2>
                                 <p class="text-center">Welcome to the At Home Learning  portal</p>
-                                
+
 
                                 <div className="form-group-row" >
                                     {/* <div style={{ color: "red" }}>{(this.props.error ? this.props.error : '')}</div> */}
