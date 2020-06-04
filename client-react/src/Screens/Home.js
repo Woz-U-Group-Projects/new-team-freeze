@@ -60,6 +60,7 @@ class Home extends React.Component {
                         <li>
                             <Link to="/">Log Off</Link>
                         </li>
+
                     </ul>
                     
                     {/*login input */}
