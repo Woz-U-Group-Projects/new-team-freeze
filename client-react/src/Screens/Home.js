@@ -61,6 +61,7 @@ class Home extends React.Component {
                             <Link to="/">Log Off</Link>
                         </li>
                     </ul>
+                    
                     <div className="container ">
                         <div className="row">
                             <div className="col-sm-4 offset-sm-4">
