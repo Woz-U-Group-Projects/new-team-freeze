@@ -62,6 +62,7 @@ class Home extends React.Component {
                         </li>
                     </ul>
                     
+                    {/*login input */}
                     <div className="container ">
                         <div className="row">
                             <div className="col-sm-4 offset-sm-4">
