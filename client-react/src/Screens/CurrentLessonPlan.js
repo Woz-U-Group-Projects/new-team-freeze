@@ -44,7 +44,7 @@ class CurrentLessonPlan extends React.Component {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/Teacher">Teacher</Link>
+                            <Link to="/Teacher">Dashboard</Link>
                         </li>
                         <li>
                             <Link to="/CreateLesson">Create Lesson</Link>

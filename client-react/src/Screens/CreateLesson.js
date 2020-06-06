@@ -37,13 +37,14 @@ class CreateLesson extends React.Component {
     render() {
 
         return (
+            <div className="container">
             <div>
-            <ul className="container" > 
+            <ul className="header" > 
                     <li>
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/teacher">Teacher</Link>
+                        <Link to="/teacher">Dashboard</Link>
                     </li>
                     <li>
                         <Link to="/CreateLesson">Create Lesson</Link>
@@ -58,6 +59,7 @@ class CreateLesson extends React.Component {
                         <Link to="/">Log Off</Link>
                     </li>
                 </ul>
+                </div>
 
                 <div className='center'>
                     <h2>Create Lesson Page</h2>
