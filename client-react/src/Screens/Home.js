@@ -44,7 +44,7 @@ class Home extends React.Component {
         if (!this.props.token || this.props.token === "") {
             return (
                 <div className="container" >
-                   <ul >
+                   <ul className="header" >
                         <li>
                             <Link to="/">Home</Link>
                         </li>
