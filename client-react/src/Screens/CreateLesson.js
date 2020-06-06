@@ -38,7 +38,7 @@ class CreateLesson extends React.Component {
 
         return (
             <div>
-                <ul className="container" >
+            <ul className="container" > 
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -61,8 +61,8 @@ class CreateLesson extends React.Component {
 
                 <div className='center'>
                     <h2>Create Lesson Page</h2>
-
                 </div>
+                <hr></hr>
             </div>
         )
     }

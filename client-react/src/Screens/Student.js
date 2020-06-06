@@ -52,8 +52,9 @@ class Student extends React.Component {
                 <div className="center">
 
                     <h2>Student Page</h2>
-                    <h3>Welcome to At-Home Learning</h3>
+                    <h6>Welcome to At-Home Learning</h6>
                 </div>
+                <hr></hr>
             </div>
 
         )

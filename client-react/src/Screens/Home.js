@@ -44,7 +44,7 @@ class Home extends React.Component {
         if (!this.props.token || this.props.token === "") {
             return (
                 <div className="container" >
-                    <ul >
+                   <ul >
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -60,7 +60,6 @@ class Home extends React.Component {
                         <li>
                             <Link to="/">Log Off</Link>
                         </li>
-
                     </ul>
                     
                     {/*login input */}
@@ -69,7 +68,11 @@ class Home extends React.Component {
                             <div className="col-sm-4 offset-sm-4">
 
                                 <h2 className="text-center">Home</h2>
-                                <p className="text-center">Welcome to the At Home Learning  portal</p>
+                                <h6 className="text-center">Welcome to the At Home Learning  Portal</h6>
+                                <hr></hr>
+                                <p className="text-center">Enter your login credentials below:</p>
+                                
+                                
 
 
                                 <div className="form-group-row" >

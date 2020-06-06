@@ -48,7 +48,7 @@ class Login extends React.Component {
           {/* <li>
             <Link to="/Registration">Registration</Link>
           </li> */}
-          {/* <li>
+         {/* <li>
             <Link to="/">Log Off</Link>
           </li> 
         </ul>

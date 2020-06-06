@@ -53,23 +53,23 @@ class User extends React.Component {
                 <div className="col-sm-4 offset-sm-4" >
 
                     <h2 className="text-center">Registration</h2>
-                    <p className="text-center">To Register, Please complete the below Items.</p>
-                    
+                    <hr></hr>
+                    <p className="text-center">To register, please complete the form below.</p>
+                    {/* <input ref={this.userName} /> */}
 
                     <div className="form-row">
                         <div className="text-center">
                             <form>
-                                <div className="form-group ">
-                                    <select
-                                        // select={value.toString()} 
-                                        ref={this.role}>
-                                        <option defaultValue="S">Student</option>
+                                <select className="browser-default custom-select">
+                                    
+                                        {/* select={value.toString()*/} 
+                                        ref={this.role}/>
                                         <option defaultValue="T">Teacher</option>
-                                        <option defaultValue="P">Parent</option>
-
+                                        <option value="S">Student</option>
+                                        <option value="P">Parent</option>
                                     </select>
+
                                     <br></br>
-                                </div>
                                 {/* registration form*/}
                                 <div >
                                     <div className="form-group">
@@ -79,7 +79,7 @@ class User extends React.Component {
                                         <label><input className="form-control" ref={this.lastname} type="text" placeholder="Last Name" name="lastname" /></label>
                                     </div>
                                     <div className="form-group">
-                                        <label> <input className="form-control" ref={this.username} type="text" placeholder="User Name" autoComplete="username" /></label>
+                                        <label> <input className="form-control" ref={this.username} type="text" placeholder="Username" autoComplete="username" /></label>
                                     </div>
                                     <div className="form-group ">
                                         <label><input className="form-control" ref={this.password} type="password" placeholder="Password" autoComplete="password" /></label>

@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 
 
-class Registration extends React.Component {
+class Register extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { registration: [] };
+        this.state = { register: [] };
         this.taskName = React.createRef();
     }
 
@@ -29,7 +29,7 @@ class Registration extends React.Component {
 
         // Express uses port 3001 (react uses 3000)
         // let url = "http://localhost:3001/tasks";
-        axios.get(url).then(response => this.setState({ registration: response.data }));
+        axios.get(url).then(response => this.setState({ register: response.data }));
     };
 
 
@@ -97,4 +97,4 @@ class Registration extends React.Component {
 }
 
 
-export default Registration;
+export default Register;

@@ -40,7 +40,7 @@ class Parent extends React.Component {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/Teacher">Teacher</Link>
+                    <Link to="/Teacher">Teacher</Link>
                     </li>
                     <li>
                         <Link to="/Student">Student</Link>
@@ -56,8 +56,9 @@ class Parent extends React.Component {
                 <div className="center">
 
                     <h2>Parent Page</h2>
-                    <h3>Welcome to At-Home Learning</h3>
+                    <h6>Welcome to At-Home Learning</h6>
                 </div>
+                <hr></hr>
             </div>
 
         )
