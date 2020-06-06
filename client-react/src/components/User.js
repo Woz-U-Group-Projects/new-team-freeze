@@ -80,8 +80,8 @@ class User extends React.Component {
                                         {/* select={value.toString()*/} 
                                         ref={this.role}/>
                                         <option defaultValue="T">Teacher</option>
-                                        <option value="S">Student</option>
-                                        <option value="P">Parent</option>
+                                        <option defaultValue="S">Student</option>
+                                        <option defaultValue="P">Parent</option>
                                     </select>
 
                                     <br></br>
