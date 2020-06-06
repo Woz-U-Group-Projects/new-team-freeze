@@ -79,14 +79,14 @@ class Home extends React.Component {
                                     {/* <div style={{ color: "red" }}>{(this.props.error ? this.props.error : '')}</div> */}
                                     <div className="form-group row">
                                         {/* <label htmlFor="username">Username:</label> */}
-                                        <input type="text" className="form-control" id="username" placeholder="User Name" name="username" onChange={this.props.onUsernameChange} />
+                                        <input type="text" className="form-control" id="username" placeholder="username" name="username" onChange={this.props.onUsernameChange} />
                                     </div>
                                     <div className="form-group row">
                                         {/* <label htmlFor="password">Password:</label> */}
                                         <input type="password" className="form-control" id="password" placeholder="password" name="password" onChange={this.props.onPasswordChange} />
                                     </div>
                                     <div className="text-center">
-                                        <button className="btn btn-primary btn-lg" onClick={this.props.onLogin}>Submit</button>
+                                        <button className="btn btn-primary btn-lg" onClick={this.props.onLogin}>Sign in</button>
                                         <button className="btn btn-secondary" onClick={this.register}>Register</button>
                                     </div>
                                 </div>
