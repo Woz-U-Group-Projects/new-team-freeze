@@ -5,7 +5,11 @@ class User extends React.Component {
     constructor(props) {
         super(props);
         this.state = { user: [] };
-        this.userName = React.createRef();
+        this.username = React.createRef();
+        this.password = React.createRef();
+        this.firstname = React.createRef();
+        this.lastname = React.createRef();
+        this.role = React.createRef();
     }
 
     componentDidMount() {
@@ -26,37 +30,18 @@ class User extends React.Component {
 
     addUser = () => {
         let url = "http://localhost:8080/user";
-        axios.post(url, { username: this.userName.current.value }).then(response => {
-            // refresh the data
-            this.getData();
-            // empty the input
-            this.userName.current.value = "";
-        });
-        axios.post(url, { password: this.password.current.value }).then(response => {
-            // refresh the data
-            this.getData();
-            // empty the input
-            this.password.current.value = "";
-        });
-        axios.post(url, { firstName: this.firstName.current.value }).then(response => {
-            // refresh the data
-            this.getData();
-            // empty the input
-            this.firstName.current.value = "";
-        });
-        axios.post(url, { lastName: this.lastName.current.value }).then(response => {
+        axios.post(url, {
+            username: this.username.current.value,
+            password: this.password.current.value,
+            firstname: this.firstname.current.value,
+            lastname: this.lastname.current.value,
+            role: this.role.current.value
+        }).then(response => {
             // refresh the data
             this.getData();
             // empty the input
             this.username.current.value = "";
         });
-        axios.post(url, { role: this.role.current.value }).then(response => {
-            // refresh the data
-            this.getData();
-            // empty the input
-            this.role.current.value = "";
-        });
-
     };
 
 
@@ -69,7 +54,7 @@ class User extends React.Component {
 
                     <h2 className="text-center">Registration</h2>
                     <p className="text-center">To Register, Please complete the below Items.</p>
-                    {/* <input ref={this.userName} /> */}
+                    
 
                     <div className="form-row">
                         <div className="text-center">
@@ -79,19 +64,19 @@ class User extends React.Component {
                                         // select={value.toString()} 
                                         ref={this.role}>
                                         <option defaultValue="S">Student</option>
-                                        <option value="T">Teacher</option>
-                                        <option value="P">Parent</option>
+                                        <option defaultValue="T">Teacher</option>
+                                        <option defaultValue="P">Parent</option>
 
                                     </select>
                                     <br></br>
                                 </div>
-
+                                {/* registration form*/}
                                 <div >
                                     <div className="form-group">
-                                        <label><input className="form-control" ref={this.firstName} type="text" placeholder="First name" name="firstName" /> </label>
+                                        <label><input className="form-control" ref={this.firstname} type="text" placeholder="First name" name="firstname" /> </label>
                                     </div>
                                     <div className="form-group">
-                                        <label><input className="form-control" ref={this.lastName} type="text" placeholder="Last Name" name="lastName" /></label>
+                                        <label><input className="form-control" ref={this.lastname} type="text" placeholder="Last Name" name="lastname" /></label>
                                     </div>
                                     <div className="form-group">
                                         <label> <input className="form-control" ref={this.username} type="text" placeholder="User Name" autoComplete="username" /></label>
@@ -99,16 +84,13 @@ class User extends React.Component {
                                     <div className="form-group ">
                                         <label><input className="form-control" ref={this.password} type="password" placeholder="Password" autoComplete="password" /></label>
                                     </div>
-                                    <div className="form-group ">
-                                        <label><input className="form-control" ref={this.password} type="password" placeholder=" re-enter Password" autoComplete="password" /></label>
-                                    </div>
                                     <br></br>
                                     <div className="text-center">
                                         <button type="submit" className="btn btn-primary" onClick={this.addUser}>Register</button>
                                     </div>
                                 </div>
-
                             </form>
+
                         </div>
                     </div>
 
