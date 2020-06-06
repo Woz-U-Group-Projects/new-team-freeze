@@ -67,7 +67,7 @@ class User extends React.Component {
 
                 <div className="col-sm-4 offset-sm-4" >
 
-                    <h2 className="text-center">Registration</h2>
+                    <h2 className="text-center">Register</h2>
                     <hr></hr>
                     <p className="text-center">To register, please complete the form below.</p>
                     {/* <input ref={this.userName} /> */}
