@@ -60,10 +60,7 @@ class User extends React.Component {
                     <div className="form-row">
                         <div className="text-center">
                             <form>
-                                <select className="browser-default custom-select">
-                                    
-                                        {/* select={value.toString()*/} 
-                                        ref={this.role}/>
+                                <select className="browser-default custom-select" ref={this.role}>
                                         <option defaultValue="T">Teacher</option>
                                         <option defaultValue="S">Student</option>
                                         <option defaultValue="P">Parent</option>
