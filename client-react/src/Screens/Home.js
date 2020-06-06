@@ -36,7 +36,7 @@ class Home extends React.Component {
     };
 
     register() {
-        window.location.href = "./Registration";
+        window.location.href = "./Register";
     }
 
 
@@ -44,29 +44,46 @@ class Home extends React.Component {
         if (!this.props.token || this.props.token === "") {
             return (
                 <div className="container" >
-                    <ul >
-                        
+                   <ul >
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/Teacher">Teacher</Link>
+                        </li>
+                        <li>
+                            <Link to="/Student">Student</Link>
+                        </li>
+                        <li>
+                            <Link to="/Parent">Parent</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Log Off</Link>
+                        </li>
                     </ul>
                     <div className="container ">
                         <div className="row">
                             <div className="col-sm-4 offset-sm-4">
                                 
                                 <h2 className="text-center">Home</h2>
-                                <p class="text-center">Welcome to the At Home Learning  portal</p>
+                                <h6 className="text-center">Welcome to the At Home Learning  Portal</h6>
+                                <hr></hr>
+                                <p className="text-center">Enter your login credentials below:</p>
+                                
                                 
 
                                 <div className="form-group-row" >
                                     {/* <div style={{ color: "red" }}>{(this.props.error ? this.props.error : '')}</div> */}
                                     <div className="form-group row">
                                         {/* <label htmlFor="username">Username:</label> */}
-                                        <input type="text" class="form-control" id="username" placeholder="User Name" name="username" onChange={this.props.onUsernameChange} />
+                                        <input type="text" class="form-control" id="username" placeholder="username" name="username" onChange={this.props.onUsernameChange} />
                                     </div>
                                     <div className="form-group row">
                                         {/* <label htmlFor="password">Password:</label> */}
                                         <input type="password" class="form-control" id="password" placeholder="password" name="password" onChange={this.props.onPasswordChange} />
                                     </div>
                                     <div className="text-center">
-                                        <button class="btn btn-primary btn-lg" onClick={this.props.onLogin}>Submit</button>
+                                        <button class="btn btn-primary btn-lg" onClick={this.props.onLogin}>Sign In</button>
                                         <button class="btn btn-secondary" onClick={this.register}>Register</button>
                                     </div>
                                 </div>

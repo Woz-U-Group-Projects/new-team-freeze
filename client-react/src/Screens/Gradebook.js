@@ -63,6 +63,7 @@ class Gradebook extends React.Component {
                 <div className='center'>
                     <h2>Grade Book</h2>
                 </div>
+                <hr></hr>
             </div>
         )
     }

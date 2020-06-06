@@ -62,8 +62,8 @@ class CurrentLessonPlan extends React.Component {
                 </div>
                 <div className='center'>
                     <h2>Current Lesson Page</h2>
-
                 </div>
+                <hr></hr>
             </div>
         )
     }

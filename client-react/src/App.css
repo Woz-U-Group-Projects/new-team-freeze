@@ -53,19 +53,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
-.register {
-  display: auto;
-  flex: auto;
-  text-align: center;
-  align-self: center;
-}
-
-.login {
-  display: auto;
-  flex: auto;
-  text-align: center;
-}
-
 @media screen
 and (min-device-width: 1200px)
 and (max-device-width: 1600px)
@@ -80,32 +67,50 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (min-resolution: 192dpi) {
 }
 
-/* .home {
-text-align: center;  
-} */
 
 
+body {
+  background-color: rgb(225, 239, 252);
 
-/* ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
 }
 
-li {
-  float: left;
+.header {
+  background-color: rgb(26, 121, 165);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* ----------- Header/Navbar ----------- */
 
 li a {
-  display: block;
+  display: flex;
   color: white;
   text-align: center;
-  padding: 16px;
-  text-decoration: none;
+  padding: 14px;
 }
 
 li a:hover {
-  background-color: #111111;
-} */
+  color: white;
+  background-color: black;
+}
+
+/* ----------- Registration Page/User.js ----------- */
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.browser-default {
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+button {
+  margin: 2px;
+}

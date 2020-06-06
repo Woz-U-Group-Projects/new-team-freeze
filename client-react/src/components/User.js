@@ -5,7 +5,7 @@ class User extends React.Component {
     constructor(props) {
         super(props);
         this.state = { user: [] };
-        this.userName = React.createRef();
+        this.username = React.createRef();
     }
 
     componentDidMount() {
@@ -14,7 +14,7 @@ class User extends React.Component {
 
     getData = () => {
         // Java Spring Boot uses port 8080
-        let url = "http://localhost:8080/users";
+        let url = "http://localhost:8080/user";
 
         // C# dotnetcore uses port 5000
         //let url = "http://localhost:5000/projects";
@@ -25,12 +25,12 @@ class User extends React.Component {
     };
 
     addUser = () => {
-        let url = "http://localhost:8080/users";
-        axios.post(url, { username: this.userName.current.value }).then(response => {
+        let url = "http://localhost:8080/user";
+        axios.post(url, { username: this.username.current.value }).then(response => {
             // refresh the data
             this.getData();
             // empty the input
-            this.userName.current.value = "";
+            this.username.current.value = "";
         });
         axios.post(url, { password: this.password.current.value }).then(response => {
             // refresh the data
@@ -38,17 +38,17 @@ class User extends React.Component {
             // empty the input
             this.password.current.value = "";
         });
-        axios.post(url, { firstName: this.firstName.current.value }).then(response => {
+        axios.post(url, { firstName: this.firstname.current.value }).then(response => {
             // refresh the data
             this.getData();
             // empty the input
-            this.firstName.current.value = "";
+            this.firstname.current.value = "";
         });
-        axios.post(url, { lastName: this.lastName.current.value }).then(response => {
+        axios.post(url, { lastName: this.lastname.current.value }).then(response => {
             // refresh the data
             this.getData();
             // empty the input
-            this.username.current.value = "";
+            this.lastname.current.value = "";
         });
         axios.post(url, { role: this.role.current.value }).then(response => {
             // refresh the data
@@ -68,24 +68,23 @@ class User extends React.Component {
                 <div className="col-sm-4 offset-sm-4" >
 
                     <h2 className="text-center">Registration</h2>
-                    <p className="text-center">To Register, Please complete the below Items.</p>
+                    <hr></hr>
+                    <p className="text-center">To register, please complete the form below.</p>
                     {/* <input ref={this.userName} /> */}
 
                     <div className="form-row">
                         <div className="text-center">
                             <form>
-                                <div className="form-group ">
-                                    <select
-                                        // select={value.toString()} 
-                                        ref={this.role}>
-                                        <option defaultValue="S">Student</option>
-                                        <option value="T">Teacher</option>
+                                <select className="browser-default custom-select">
+                                    
+                                        {/* select={value.toString()*/} 
+                                        ref={this.role}/>
+                                        <option defaultValue="T">Teacher</option>
+                                        <option value="S">Student</option>
                                         <option value="P">Parent</option>
-
                                     </select>
-                                    <br></br>
-                                </div>
 
+                                    <br></br>
                                 <div >
                                     <div className="form-group">
                                         <label><input className="form-control" ref={this.firstName} type="text" placeholder="First name" name="firstName" /> </label>
@@ -94,13 +93,13 @@ class User extends React.Component {
                                         <label><input className="form-control" ref={this.lastName} type="text" placeholder="Last Name" name="lastName" /></label>
                                     </div>
                                     <div className="form-group">
-                                        <label> <input className="form-control" ref={this.username} type="text" placeholder="User Name" autoComplete="username" /></label>
+                                        <label> <input className="form-control" ref={this.username} type="text" placeholder="Username" autoComplete="username" /></label>
                                     </div>
                                     <div className="form-group ">
                                         <label><input className="form-control" ref={this.password} type="password" placeholder="Password" autoComplete="password" /></label>
                                     </div>
                                     <div className="form-group ">
-                                        <label><input className="form-control" ref={this.password} type="password" placeholder=" re-enter Password" autoComplete="password" /></label>
+                                        <label><input className="form-control" ref={this.password} type="password" placeholder="Re-enter Password" autoComplete="password" /></label>
                                     </div>
                                     <br></br>
                                     <div className="text-center">
