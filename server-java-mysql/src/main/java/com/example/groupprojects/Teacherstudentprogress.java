@@ -9,28 +9,24 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "teacher")
-public class Teacher {
+public class Teacherstudentprogress {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String createlesson;
+	private String firstname;
 
-	private String currentlesson;
+	private String lastname;
 
 	private String mathprogress;
 
-	private String mathgrade;
-
 	private String readingprogress;
 
-	private String readinggrade;
+	private String socialstudiesprogress;
 
 	private String scienceprogress;
-
-	private String sciencegrade;
 
 	public Long getId() {
 		return id;
@@ -40,20 +36,20 @@ public class Teacher {
 		this.id = id;
 	}
 
-	public String getCreatelesson() {
-		return createlesson;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setCreatelesson(String createlesson) {
-		this.createlesson = createlesson;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getCurrentlesson() {
-		return currentlesson;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setCurrentlesson(String currentlesson) {
-		this.currentlesson = currentlesson;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getMathprogress() {
@@ -64,14 +60,6 @@ public class Teacher {
 		this.mathprogress = mathprogress;
 	}
 
-	public String getMathgrade() {
-		return mathgrade;
-	}
-
-	public void setMathgrade(String mathgrade) {
-		this.mathgrade = mathgrade;
-	}
-
 	public String getReadingprogress() {
 		return readingprogress;
 	}
@@ -80,12 +68,12 @@ public class Teacher {
 		this.readingprogress = readingprogress;
 	}
 
-	public String getReadinggrade() {
-		return readinggrade;
+	public String getSocialstudiesprogress() {
+		return socialstudiesprogress;
 	}
 
-	public void setReadinggrade(String readinggrade) {
-		this.readinggrade = readinggrade;
+	public void setSocialstudiesprogress(String socialstudiesprogress) {
+		this.socialstudiesprogress = socialstudiesprogress;
 	}
 
 	public String getScienceprogress() {
@@ -94,14 +82,6 @@ public class Teacher {
 
 	public void setScienceprogress(String scienceprogress) {
 		this.scienceprogress = scienceprogress;
-	}
-
-	public String getSciencegrade() {
-		return sciencegrade;
-	}
-
-	public void setSciencegrade(String sciencegrade) {
-		this.sciencegrade = sciencegrade;
 	}
 
 }
