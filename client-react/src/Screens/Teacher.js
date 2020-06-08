@@ -53,15 +53,16 @@ class Teacher extends React.Component {
 
     renderTableData() {
         return this.state.teacher.map((student, index) => {
-            const { id, name, Math, Reading, Social_Studies, Science } = student //destructuring
+            const { id, firstname, lastname, math, reading, social_studies, science } = student //destructuring
             return (
                 <tr key={id}>
                     <td>{id}</td>
-                    <td>{name}</td>
-                    <td>{Math}</td>
-                    <td>{Reading}</td>
-                    <td>{Social_Studies}</td>
-                    <td>{Science}</td>
+                    <td>{firstname}</td>
+                    <td>{lastname}</td>
+                    <td>{math}</td>
+                    <td>{reading}</td>
+                    <td>{social_studies}</td>
+                    <td>{science}</td>
                 </tr>
             )
         })

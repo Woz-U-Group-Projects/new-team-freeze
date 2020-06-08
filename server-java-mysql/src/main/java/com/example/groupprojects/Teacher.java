@@ -20,13 +20,13 @@ public class Teacher {
 
 	private String lastname;
 
-	private String mathprogress;
+	private String math;
 
-	private String readingprogress;
+	private String reading;
 
-	private String socialstudiesprogress;
+	private String social_studies;
 
-	private String scienceprogress;
+	private String science;
 
 	public Long getId() {
 		return id;
@@ -52,36 +52,36 @@ public class Teacher {
 		this.lastname = lastname;
 	}
 
-	public String getMathprogress() {
-		return mathprogress;
+	public String getMath() {
+		return math;
 	}
 
-	public void setMathprogress(String mathprogress) {
-		this.mathprogress = mathprogress;
+	public void setMath(String math) {
+		this.math = math;
 	}
 
-	public String getReadingprogress() {
-		return readingprogress;
+	public String getReading() {
+		return reading;
 	}
 
-	public void setReadingprogress(String readingprogress) {
-		this.readingprogress = readingprogress;
+	public void setReading(String reading) {
+		this.reading = reading;
 	}
 
-	public String getSocialstudiesprogress() {
-		return socialstudiesprogress;
+	public String getSocial_studies() {
+		return social_studies;
 	}
 
-	public void setSocialstudiesprogress(String socialstudiesprogress) {
-		this.socialstudiesprogress = socialstudiesprogress;
+	public void setSocial_studies(String social_studies) {
+		this.social_studies = social_studies;
 	}
 
-	public String getScienceprogress() {
-		return scienceprogress;
+	public String getScience() {
+		return science;
 	}
 
-	public void setScienceprogress(String scienceprogress) {
-		this.scienceprogress = scienceprogress;
+	public void setScience(String science) {
+		this.science = science;
 	}
 
 }

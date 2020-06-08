@@ -41,10 +41,10 @@ public class TeacherController {
     if (foundTeacher != null) {
     	foundTeacher.setFirstname(teacher.getFirstname());
     	foundTeacher.setLastname(teacher.getLastname());
-    	foundTeacher.setMathprogress(teacher.getMathprogress());
-    	foundTeacher.setReadingprogress(teacher.getReadingprogress());
-    	foundTeacher.setSocialstudiesprogress(teacher.getSocialstudiesprogress());
-    	foundTeacher.setScienceprogress(teacher.getScienceprogress());
+    	foundTeacher.setMath(teacher.getMath());
+    	foundTeacher.setReading(teacher.getReading());
+    	foundTeacher.setSocial_studies(teacher.getSocial_studies());
+    	foundTeacher.setScience(teacher.getScience());
       teacherRepository.save(foundTeacher);
       return foundTeacher;
     }
