@@ -7,6 +7,9 @@ import {
     //  Route
 } from "react-router-dom";
 
+import {userService} from "../_services/user.service";
+
+
 
 
 
@@ -24,10 +27,10 @@ class Home extends React.Component {
 
     componentDidMount() {
         this.setState({
-            user: JSON.parse(localStorage.getItem('/User')),
+            user: JSON.parse(localStorage.getItem('http://localhost:8080/User')),
             users: { loading: true }
         });
-        // userService.getAll().then(users => this.setState({ users }));
+        userService.getAll().then(users => this.setState({ users }));
     }
 
     getData = () => {
@@ -68,10 +71,7 @@ class Home extends React.Component {
                         <Link to="/Login">Log Off</Link>
                     </li>
                 </ul>
-
-
-
-                {/*login input */}
+                
                 <div className="container ">
                     <div className="row">
                         <div className="col-sm-4 offset-sm-4">
@@ -87,13 +87,15 @@ class Home extends React.Component {
                                         </li>
                                     )}
                                 </ul>
-                            }*/}
+                            } */}
 
 
                             <h2 className="text-center">Home</h2>
                             <h6 className="text-center">Welcome to the At Home Learning  Portal</h6>
                             <hr></hr>
-                                                
+                                     <p>
+                                           
+                                    </p>           
 
 
                         </div>
