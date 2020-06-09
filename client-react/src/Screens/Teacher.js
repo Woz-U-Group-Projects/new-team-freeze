@@ -16,7 +16,15 @@ class Teacher extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            teacher: []
+            teacher: [
+                { id: "", 
+                firstname: "", 
+                lastname: "",
+                Math: "", 
+                Reading: "" ,
+                Social_Studies: "", 
+                Science:"" }
+            ]
         };
         this.taskName = React.createRef();
     }

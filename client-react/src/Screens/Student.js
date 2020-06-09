@@ -11,10 +11,16 @@ class Student extends React.Component {
         super(props);
         this.state = { 
             student: [
-                { course_name: 'math', Progress: "In_Progress", due_date: "august 2020"},
-                { id: 2, name: 'William', Math: "Not_Started", Reading: "In_Progress" ,Social_Studies: "Not_Started", Science:"Completed"},
-                { id: 3, name: 'Gina', Math: "Completed", Reading: "Completed" ,Social_Studies: "Not_Started", Science:"Completed"},
-                { id: 4, name: 'Molly', Math: "In_Progress", Reading: "Not_Started",Social_Studies: "Not_Started" , Science:"Completed"}
+                { id: "", 
+                mathlesson: "", 
+                mathprogress: "", 
+                readinglesson: "", 
+                readingprogress: "", 
+                socialstudieslesson: "", 
+                socialstudiesprogress: "", 
+                sciencelesson: "", 
+                scienceprogress: "", 
+                duedates: "" }
             ] 
         };
         this.taskName = React.createRef();
