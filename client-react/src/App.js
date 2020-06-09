@@ -1,83 +1,54 @@
 import React from "react";
 import "./App.css";
-import Home from './Screens/Home'
-import Login from './Screens/Login'
-import Register from './Screens/Register'
-import Teacher from './Screens/Teacher'
-import CreateLesson from './Screens/CreateLesson'
-import CurrentLessonPlan from './Screens/CurrentLessonPlan'
-import Gradebook from './Screens/Gradebook'
-import Student from './Screens/Student'
+import Home from './HomePage/Home';
+import Login from './LoginPage/Login';
+import Register from './Screens/Register';
+import Teacher from './Screens/Teacher';
+import CreateLesson from './Screens/CreateLesson';
+import CurrentLessonPlan from './Screens/CurrentLessonPlan';
+import Gradebook from './Screens/Gradebook';
+import Student from './Screens/Student';
 import {
   BrowserRouter as Router,
   // Link,
   Route
 } from "react-router-dom";
-import Values from './Values';
-import StudentProfile from './Screens/StudentProfile'
-import Parent from './Screens/Parent'
+// import Values from './Values';
+import StudentProfile from './Screens/StudentProfile';
+import Parent from './Screens/Parent';
+import { PrivateRoute } from './_components';
+
 
 
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { token: "", username: "", password: "", values: [], error: "" };
-  }
-  onLogin = () => {
-    fetch("http://localhost:8080/home", {
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      method: "POST",
-      body: JSON.stringify({ username: this.state.username, password: this.state.password })
-    })
-      .then(res => res.headers.get("authorization"))
-      .then(token => {
-        if (token) {
-          this.setState({ ...this.state, token: token });
-        } else {
-          this.setState({ ...this.state, error: "Unable to login with username and password." });
-        }
-      });
-  }
 
-  onUsernameChange = (e) => this.setState({ ...this.state, username: e.target.value });
-  onPasswordChange = (e) => this.setState({ ...this.state, password: e.target.value });
-     
 
-  onGetValues = () => {
-    fetch("http://localhost:8080/api/values", {
-      headers: { 'Authorization': this.state.token }
-    })
-      .then(res => res.json())
-      .then(json => this.setState({ ...this.state, values: json }));
-  }
+
+
+
   //function to load the title bar 
   // function App() {
   render() {
     return (
       <div>
-        <div className="App">
-          <header className="App-header">
-            {(!this.state.token || this.state.token === "")
-              ? (<Login onUsernameChange={this.onUsernameChange}
-                onPasswordChange={this.onPasswordChange}
-                onLogin={this.onLogin}
-                error={this.state.error}></Login>)
-              : (<Values values={this.state.values} onGetValues={this.onGetValues}></Values>)}
-          </header>
-        </div>
+
         <Router>
-          <Route exact path='/' component={Home} />
-          <Route path='/Login' component={Login} />
-          <Route path='/Register' component={Register} />
-          <Route path='/Teacher' component={Teacher} />
-          <Route path='/CreateLesson' component={CreateLesson} />
-          <Route path='/CurrentLessonPlan' component={CurrentLessonPlan} />
-          <Route path='/Gradebook' component={Gradebook} />
-          <Route path='/Student' component={Student} />
-          <Route path='/StudentProfile' component={StudentProfile} />
-          <Route path='/Parent' component={Parent} />
+          <div>
+            <Route exact path="/" component={Login} />
+            <Route path="/Login" component={Login} />
+
+            <PrivateRoute path='/Home' component={Home} />
+            <Route path='/Register' component={Register} />
+            <PrivateRoute path='/Teacher' component={Teacher} />
+            <PrivateRoute path='/CreateLesson' component={CreateLesson} />
+            <PrivateRoute path='/CurrentLessonPlan' component={CurrentLessonPlan} />
+            <PrivateRoute path='/Gradebook' component={Gradebook} />
+            <PrivateRoute path='/Student' component={Student} />
+            <PrivateRoute path='/StudentProfile' component={StudentProfile} />
+            <PrivateRoute path='/Parent' component={Parent} />
+          </div>
         </Router>
       </div>
     );

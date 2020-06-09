@@ -37,7 +37,7 @@ class Student extends React.Component {
             <div className="container">
                 <ul className="header" >
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/Home">Home</Link>
                         </li>
 
                         <li>
@@ -45,7 +45,7 @@ class Student extends React.Component {
                         </li>
 
                         <li>
-                            <Link to="/">Log Off</Link>
+                            <Link to="/Login">Log Off</Link>
                         </li>
                     </ul>
                     

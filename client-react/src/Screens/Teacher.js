@@ -16,12 +16,7 @@ class Teacher extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            teacher: [
-                { id: 1, name: 'Thomas', Math: "In_Progress", Reading: "In_Progress", Social_Studies: "Not_Started", Science:"Not_Started"},
-                { id: 2, name: 'William', Math: "Not_Started", Reading: "In_Progress" ,Social_Studies: "Not_Started", Science:"Completed"},
-                { id: 3, name: 'Gina', Math: "Completed", Reading: "Completed" ,Social_Studies: "Not_Started", Science:"Completed"},
-                { id: 4, name: 'Molly', Math: "In_Progress", Reading: "Not_Started",Social_Studies: "Not_Started" , Science:"Completed"}
-            ]
+            teacher: []
         };
         this.taskName = React.createRef();
     }
@@ -75,7 +70,7 @@ class Teacher extends React.Component {
                 <div>
                     <ul className="header" >
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/Home">Home</Link>
                         </li>
                         <li>
                             <Link to="/Teacher">Dashboard</Link>
@@ -90,7 +85,7 @@ class Teacher extends React.Component {
                             <Link to="/Gradebook">Grade Book</Link>
                         </li>
                         <li>
-                            <Link to="/">Log Off</Link>
+                            <Link to="/Login">Log Off</Link>
                         </li>
                     </ul>
                 </div>
