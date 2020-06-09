@@ -9,7 +9,20 @@ import {
 class Student extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { student: [] };
+        this.state = { 
+            student: [
+                { id: "", 
+                mathlesson: "", 
+                mathprogress: "", 
+                readinglesson: "", 
+                readingprogress: "", 
+                socialstudieslesson: "", 
+                socialstudiesprogress: "", 
+                sciencelesson: "", 
+                scienceprogress: "", 
+                duedates: "" }
+            ] 
+        };
         this.taskName = React.createRef();
     }
 
@@ -30,11 +43,36 @@ class Student extends React.Component {
         axios.get(url).then(response => this.setState({ student: response.data }));
     };
 
+    renderTableHeader() {
+        let header = Object.keys(this.state.student[0])
+        return header.map((key, index) => {
+            return <th key={index}>{key.toUpperCase()}</th>
+        })
+    }
+
+    renderTableData() {
+        return this.state.student.map((student, index) => {
+            const { id, firstname, lastname, math, reading, social_studies, science } = student //destructuring
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{firstname}</td>
+                    <td>{lastname}</td>
+                    <td>{math}</td>
+                    <td>{reading}</td>
+                    <td>{social_studies}</td>
+                    <td>{science}</td>
+                </tr>
+            )
+        })
+    }
+
     //
     render() {
         return (
             //create a student dashboard 
             <div className="container">
+                <div>
                 <ul className="header" >
                         <li>
                             <Link to="/Home">Home</Link>
@@ -56,6 +94,17 @@ class Student extends React.Component {
                 </div>
                 <hr></hr>
             </div>
+            {/* <div className="" > */}
+
+            <table className="table table-responsive table-striped w-auto">
+            <tbody>
+                <tr>{this.renderTableHeader()}</tr>
+                {this.renderTableData()}
+            </tbody>
+        </table>
+    {/* </div> */}
+
+</div>
 
         )
     }
