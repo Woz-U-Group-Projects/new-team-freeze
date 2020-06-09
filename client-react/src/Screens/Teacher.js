@@ -79,7 +79,7 @@ class Teacher extends React.Component {
                 <div>
                     <ul className="header" >
                         <li>
-                            <Link to="/Home">Home</Link>
+                            <Link to="/Login">Home</Link>
                         </li>
                         <li>
                             <Link to="/Teacher">Dashboard</Link>
