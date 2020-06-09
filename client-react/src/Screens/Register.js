@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from "axios";
-import User from'../components/User';
+import User from'../_components/User';
 import {
     //  BrowserRouter as Router, 
     Link,
@@ -40,11 +40,11 @@ class Register extends React.Component {
             <div className="container">
                 <ul className="header" >
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/Home">Home</Link>
                     </li>
-                    {/* <li>
+                     <li>
                         <Link to="/Login">Login</Link>
-                    </li> */}
+                    </li>
                     {/* <li>
                         <Link to="/Registration">Registration</Link>
                     </li> */}

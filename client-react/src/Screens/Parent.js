@@ -37,7 +37,7 @@ class Parent extends React.Component {
             <div className="container">
                 <ul className="header" >
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/Home">Home</Link>
                     </li>
                     <li>
                     <Link to="/Teacher">Teacher</Link>
