@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "student")
+@Table(name = "course")
 public class Student {
 
 	@Id
@@ -16,23 +16,17 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String mathlesson;
+	@Column(name = "coursename")
+	private String coursename;
 
-	private String mathprogress;
+	@Column(name = "progress")
+	private String progress;
 
-	private String readinglesson;
-
-	private String readingprogress;
-
-	private String socialstudieslesson;
-
-	private String socialstudiesprogress;
-
-	private String sciencelesson;
-
-	private String scienceprogress;
 	
-	private String duedates;
+	@Column(name = "duedate")
+	private String duedate;
+
+
 
 	public Long getId() {
 		return id;
@@ -42,76 +36,28 @@ public class Student {
 		this.id = id;
 	}
 
-	public String getMathlesson() {
-		return mathlesson;
+	public String getCoursename() {
+		return coursename;
+	}
+	
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
+	}
+	
+	public String getProgress() {
+		return progress;
 	}
 
-	public void setMathlesson(String mathlesson) {
-		this.mathlesson = mathlesson;
+	public void setProgress(String progress) {
+		this.progress = progress;
 	}
 
-	public String getMathprogress() {
-		return mathprogress;
+	public String getDuedate() {
+		return duedate;
 	}
 
-	public void setMathprogress(String mathprogress) {
-		this.mathprogress = mathprogress;
-	}
-
-	public String getReadinglesson() {
-		return readinglesson;
-	}
-
-	public void setReadinglesson(String readinglesson) {
-		this.readinglesson = readinglesson;
-	}
-
-	public String getReadingprogress() {
-		return readingprogress;
-	}
-
-	public void setReadingprogress(String readingprogress) {
-		this.readingprogress = readingprogress;
-	}
-
-	public String getSocialstudieslesson() {
-		return socialstudieslesson;
-	}
-
-	public void setSocialstudieslesson(String socialstudieslesson) {
-		this.socialstudieslesson = socialstudieslesson;
-	}
-
-	public String getSocialstudiesprogress() {
-		return socialstudiesprogress;
-	}
-
-	public void setSocialstudiesprogress(String socialstudiesprogress) {
-		this.socialstudiesprogress = socialstudiesprogress;
-	}
-
-	public String getSciencelesson() {
-		return sciencelesson;
-	}
-
-	public void setSciencelesson(String sciencelesson) {
-		this.sciencelesson = sciencelesson;
-	}
-
-	public String getScienceprogress() {
-		return scienceprogress;
-	}
-
-	public void setScienceprogress(String scienceprogress) {
-		this.scienceprogress = scienceprogress;
-	}
-
-	public String getDuedates() {
-		return duedates;
-	}
-
-	public void setDuedates(String duedates) {
-		this.duedates = duedates;
+	public void setDuedate(String duedate) {
+		this.duedate = duedate;
 	}
 
 }
