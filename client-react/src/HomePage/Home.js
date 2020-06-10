@@ -30,7 +30,7 @@ class Home extends React.Component {
             user: JSON.parse(localStorage.getItem('http://localhost:8080/User')),
             users: { loading: true }
         });
-        userService.getAll().then(users => this.setState({ users }));
+        // userService.getAll().then(users => this.setState({ users }));
     }
 
     getData = () => {

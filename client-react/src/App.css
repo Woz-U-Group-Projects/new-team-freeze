@@ -97,7 +97,7 @@ li a:hover {
 
 /* ----------- Registration Page/User.js ----------- */
 
-.form-row {
+.form-group {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,4 +132,18 @@ button {
 
 button {
   margin: 2px;
+}
+/* ----------create lesson page------ */
+.form-group-text {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  width: 50em;
+
+}
+.form-group-left{
+  display: flex;
+  text-align: left;
+  
 }
