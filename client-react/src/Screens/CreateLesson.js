@@ -13,7 +13,12 @@ class CreateLesson extends React.Component {
     constructor(props) {
         super(props);
         this.state = { createlesson: [] };
-        this.taskName = React.createRef();
+        this.subject = React.createRef();
+        this.lessonname = React.createRef();
+        this.video = React.createRef();
+        this.lessontext = React.createRef();
+        this.uploadfiles = React.createRef();
+
     }
 
 
@@ -31,6 +36,22 @@ class CreateLesson extends React.Component {
         // Express uses port 3001 (react uses 3000)
         // let url = "http://localhost:3001/tasks";
         axios.get(url).then(response => this.setState({ createlesson: response.data }));
+    };
+
+    addLesson = () => {
+        let url = "http://localhost:8080/createlesson";
+        axios.post(url, {
+            subject: this.subject.current.value,
+            lessonname: this.lessonname.current.value,
+            video: this.video.current.value,
+            lessontext: this.lessontext.current.value,
+            uploadfiles: this.uploadfiles.current.value
+        }).then(response => {
+            // refresh the data
+            this.getData();
+            // empty the input
+            this.taskName.current.value = "";
+        });
     };
 
 
@@ -76,21 +97,26 @@ class CreateLesson extends React.Component {
                         </select>
 
                         <div className="form-group-left">
-                            <label name='lessonName'>lesson name</label>
-                            <input type="text" id="lessonName" ></input>
+                            <label >Lesson Name</label>
+                            <input type="text" id="lessonName" className="form-control" ref={this.lessonName} ></input>
                         </div>
+                        <div className="form-group-left">
+                            <label >Add link to a video</label>
+                            <input type="link" id="video" className="form-control" ref={this.video}></input>
+                        </div>
+
 
                         <div className="form-group-text">
-                            <label name="lesson text">Enter Lesson Text</label>
-                            <textarea className="form-control" id="exampleTextarea" rows="3" ></textarea>
+                            <label name="lessontext">Enter Lesson Text</label>
+                            <textarea className="form-control" id="lessontext" rows="3" ref={this.lessonWorksheet} ></textarea>
                         </div>
 
-                        <div className="form-group"> 
-                                    <label name="upload files">Add a Worksheet</label>
-                                    <input type="file" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" />
-                                    {/* <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>  */}
+                        <div className="form-group">
+                            <label name="uploadfiles">Add a Worksheet</label>
+                            <input type="file" className="form-control-file" id="uploadfiles" aria-describedby="fileHelp" />
+                            {/* <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>  */}
                         </div>
-                        <button className="from-group" type='submit'>Submit Lesson</button>
+                        <button className="from-group" type='submit' onClick={this.addLesson} >Submit Lesson</button>
 
 
                     </form>
