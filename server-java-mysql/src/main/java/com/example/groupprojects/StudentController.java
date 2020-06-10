@@ -39,15 +39,9 @@ public class StudentController {
   public Student updateProject(@PathVariable Long id, @RequestBody Student student) {
     Student foundStudent = studentRepository.findById(id).orElse(null);
     if (foundStudent != null) {
-    	foundStudent.setMathlesson(student.getMathlesson());
-    	foundStudent.setMathprogress(student.getMathprogress());
-    	foundStudent.setReadinglesson(student.getReadinglesson());
-    	foundStudent.setReadingprogress(student.getReadingprogress());
-    	foundStudent.setSocialstudieslesson(student.getSocialstudieslesson());
-    	foundStudent.setSocialstudiesprogress(student.getSocialstudiesprogress());
-    	foundStudent.setSciencelesson(student.getSciencelesson());
-    	foundStudent.setScienceprogress(student.getScienceprogress());
-    	foundStudent.setDuedates(student.getDuedates());
+    	foundStudent.setCoursename(student.getCoursename());
+    	foundStudent.setProgress(student.getProgress());
+    	foundStudent.setDuedate(student.getDuedate());
       studentRepository.save(foundStudent);
       return foundStudent;
     }

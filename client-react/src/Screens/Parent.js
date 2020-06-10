@@ -9,7 +9,13 @@ import {
 class Parent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { parent: [] };
+        this.state = { parent: [
+            { id: "", 
+                coursename: "", 
+                progress: "", 
+                duedate: ""
+               }
+        ] };
         this.taskName = React.createRef();
     }
 
@@ -30,24 +36,38 @@ class Parent extends React.Component {
         axios.get(url).then(response => this.setState({ parent: response.data }));
     };
 
+    renderTableHeader() {
+        let header = Object.keys(this.state.parent[0])
+        return header.map((key, index) => {
+            return <th key={index}>{key.toUpperCase()}</th>
+        })
+    }
+
+    renderTableData() {
+        return this.state.parent.map((course, index) => {
+            const { id, coursename, progress, duedate } = course //destructuring
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{coursename}</td>
+                    <td>{progress}</td>
+                    <td>{duedate}</td>
+                </tr>
+            )
+        })
+    }
+
     //
     render() {
         return (
             //create a parent dashboard 
             <div className="container">
+                <div>
                 <ul className="header" >
                     <li>
-                        <Link to="/Home">Home</Link>
+                        <Link to="/Login">Home</Link>
                     </li>
-                    <li>
-                    <Link to="/Teacher">Teacher</Link>
-                    </li>
-                    <li>
-                        <Link to="/Student">Student</Link>
-                    </li>
-                    <li>
-                        <Link to="/Parent">Parent</Link>
-                    </li>
+                    
                     <li>
                         <Link to="/">Log Off</Link>
                     </li>
@@ -60,6 +80,17 @@ class Parent extends React.Component {
                 </div>
                 <hr></hr>
             </div>
+            {/* <div className="" > */}
+
+            <table className="table table-responsive table-striped w-auto">
+            <tbody>
+                <tr>{this.renderTableHeader()}</tr>
+                {this.renderTableData()}
+            </tbody>
+        </table>
+    {/* </div> */}
+
+</div>
 
         )
     }

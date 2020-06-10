@@ -55,8 +55,8 @@ class Teacher extends React.Component {
     }
 
     renderTableData() {
-        return this.state.teacher.map((student, index) => {
-            const { id, firstname, lastname, math, reading, social_studies, science } = student //destructuring
+        return this.state.teacher.map((teacher, index) => {
+            const { id, firstname, lastname, math, reading, social_studies, science } = teacher //destructuring
             return (
                 <tr key={id}>
                     <td>{id}</td>
@@ -79,7 +79,7 @@ class Teacher extends React.Component {
                 <div>
                     <ul className="header" >
                         <li>
-                            <Link to="/Home">Home</Link>
+                            <Link to="/Login">Home</Link>
                         </li>
                         <li>
                             <Link to="/Teacher">Dashboard</Link>

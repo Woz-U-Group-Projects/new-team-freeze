@@ -12,15 +12,10 @@ class Student extends React.Component {
         this.state = { 
             student: [
                 { id: "", 
-                mathlesson: "", 
-                mathprogress: "", 
-                readinglesson: "", 
-                readingprogress: "", 
-                socialstudieslesson: "", 
-                socialstudiesprogress: "", 
-                sciencelesson: "", 
-                scienceprogress: "", 
-                duedates: "" }
+                coursename: "", 
+                progress: "", 
+                duedate: ""
+               }
             ] 
         };
         this.taskName = React.createRef();
@@ -51,17 +46,14 @@ class Student extends React.Component {
     }
 
     renderTableData() {
-        return this.state.student.map((student, index) => {
-            const { id, firstname, lastname, math, reading, social_studies, science } = student //destructuring
+        return this.state.student.map((course, index) => {
+            const { id, coursename, progress, duedate } = course //destructuring
             return (
                 <tr key={id}>
                     <td>{id}</td>
-                    <td>{firstname}</td>
-                    <td>{lastname}</td>
-                    <td>{math}</td>
-                    <td>{reading}</td>
-                    <td>{social_studies}</td>
-                    <td>{science}</td>
+                    <td>{coursename}</td>
+                    <td>{progress}</td>
+                    <td>{duedate}</td>
                 </tr>
             )
         })
@@ -75,9 +67,11 @@ class Student extends React.Component {
                 <div>
                 <ul className="header" >
                         <li>
-                            <Link to="/Home">Home</Link>
+                            <Link to="/Login">Home</Link>
                         </li>
-
+                        <li>
+                        <Link to="/Student">Dashboard</Link>
+                        </li>
                         <li>
                         <Link to="/StudentProfile">Profile</Link>
                         </li>
