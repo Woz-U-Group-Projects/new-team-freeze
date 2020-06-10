@@ -65,7 +65,7 @@ class Parent extends React.Component {
                 <div>
                 <ul className="header" >
                     <li>
-                        <Link to="/Login">Home</Link>
+                        <Link to="/Home">Home</Link>
                     </li>
                     
                     <li>
