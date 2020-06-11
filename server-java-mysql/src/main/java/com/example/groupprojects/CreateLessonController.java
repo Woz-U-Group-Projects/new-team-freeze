@@ -42,6 +42,7 @@ public class CreateLessonController {
 	    	foundCreateLesson.setLessonname(createLesson.getLessonname());
 	    	foundCreateLesson.setLessontext(createLesson.getLessontext());
 	    	foundCreateLesson.setUploadfiles(createLesson.getUploadfiles());
+	    	foundCreateLesson.setVideo(createLesson.getVideo());
 	      createLessonRepository.save(foundCreateLesson);
 	      return foundCreateLesson;
 	    }

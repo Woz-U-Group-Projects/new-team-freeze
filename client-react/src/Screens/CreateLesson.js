@@ -50,7 +50,7 @@ class CreateLesson extends React.Component {
             // refresh the data
             this.getData();
             // empty the input
-            this.taskName.current.value = "";
+            this.lessonname.current.value = "";
         });
     };
 
@@ -98,25 +98,30 @@ class CreateLesson extends React.Component {
 
                         <div className="form-group-left">
                             <label >Lesson Name</label>
-                            <input type="text" id="lessonName" className="form-control" ref={this.lessonName} ></input>
+                            <input type="text" name="lessonName" className="form-control" ref={this.lessonname} ></input>
                         </div>
                         <div className="form-group-left">
                             <label >Add link to a video</label>
-                            <input type="link" id="video" className="form-control" ref={this.video}></input>
+                            <input type="link" name="video" className="form-control" ref={this.video}></input>
                         </div>
 
 
                         <div className="form-group-text">
                             <label name="lessontext">Enter Lesson Text</label>
-                            <textarea className="form-control" id="lessontext" rows="3" ref={this.lessonWorksheet} ></textarea>
+                            <textarea className="form-control" name="lessontext" rows="3" ref={this.lessontext} ></textarea>
                         </div>
 
                         <div className="form-group">
                             <label name="uploadfiles">Add a Worksheet</label>
-                            <input type="file" className="form-control-file" id="uploadfiles" aria-describedby="fileHelp" />
+                            <input type="file" ref={this.uploadfiles} className="form-control-file" name="uploadfiles" aria-describedby="fileHelp" />
                             {/* <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>  */}
                         </div>
-                        <button className="from-group" type='submit' onClick={this.addLesson} >Submit Lesson</button>
+                        <div className="text-center">
+                            <button type="submit"
+                                className="btn btn-primary"
+                                onClick={this.addLesson}
+                            >Submit Lesson</button>
+                        </div>
 
 
                     </form>
