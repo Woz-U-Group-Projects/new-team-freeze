@@ -10,7 +10,7 @@ import {
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { MDBIcon } from "mdbreact";
 
-//import {userService} from "../_services/user.service";
+import {userService} from "../_services/user.service";
 
 
 
@@ -20,8 +20,10 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         // this.state = { home: [] };
+
+        userService.getAll()
         this.state = {
-            user: {},
+            firstname: "",
             users: []
         };
 
