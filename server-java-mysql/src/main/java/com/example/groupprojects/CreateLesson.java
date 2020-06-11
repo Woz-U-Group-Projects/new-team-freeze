@@ -16,13 +16,20 @@ public class CreateLesson {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	@Column(name = "subject")
 	private String subject;
 	
+	@Column(name = "lessonname")
 	private String lessonname;
 	
+	@Column(name = "lessontext")
 	private String lessontext;
 	
+	@Column(name = "uploadfiles")
 	private String uploadfiles;
+	
+	@Column(name = "video")
+	private String video;
 
 	public Long getId() {
 		return id;
@@ -62,6 +69,14 @@ public class CreateLesson {
 
 	public void setUploadfiles(String uploadfiles) {
 		this.uploadfiles = uploadfiles;
+	}
+
+	public String getVideo() {
+		return video;
+	}
+
+	public void setVideo(String video) {
+		this.video = video;
 	}
 	
 	
