@@ -9,7 +9,7 @@ class Math extends React.Component {
             gradebook: [
                 { id: 1, name: 'Thomas', Water_Cycle: "Completed", Shadows: "In_Progress", Moon_Phases3: "Not_Started",  },
                 { id: 2, name: 'William', Water_Cycle: "Completed", Shadows: "In_Progress", Moon_Phases3: "Not_Started",  },
-                { id: 3, name: 'Gueniver', Water_Cycle: "Completed", Shadows: "In_Progress", Moon_Phases3: "Not_Started",  },
+                { id: 3, name: 'Guinevere', Water_Cycle: "Completed", Shadows: "In_Progress", Moon_Phases3: "Not_Started",  },
                 { id: 4, name: 'Molly', Water_Cycle: "Completed", Shadows: "In_Progress", Moon_Phases3: "Not_Started",  },
             ]
         };
