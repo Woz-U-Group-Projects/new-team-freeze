@@ -6,6 +6,8 @@ import {
     //  Route
 } from "react-router-dom";
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 class Student extends React.Component {
     constructor(props) {
         super(props);
@@ -96,8 +98,45 @@ class Student extends React.Component {
                 {this.renderTableData()}
             </tbody>
         </table>
-    {/* </div> */}
-
+        
+<div className="card-group">
+  <div className="card text-white bg-info mb-3">
+    <div className="card-body">
+      <h5 className="card-title">Math</h5>
+      <div>
+          <ProgressBar variant="success" now={25} label={`${25}%`} />
+      </div>
+      <p className="card-text">Due: Aug. 14, 2020</p>
+    </div>
+  </div>
+  <div className="card text-white bg-info mb-3">
+    <div className="card-body">
+      <h5 className="card-title">Reading</h5>
+      <div>
+          <ProgressBar variant="success" now={50} label={`${50}%`} />
+      </div>
+      <p className="card-text">Due: Aug. 14, 2020</p>
+    </div>
+  </div>
+  <div className="card text-white bg-info mb-3">
+    <div className="card-body">
+      <h5 className="card-title">Social Studies</h5>
+      <div>
+          <ProgressBar variant="success" now={70} label={`${70}%`} />
+      </div>
+      <p className="card-text">Due: Aug. 12, 2020</p>
+    </div>
+  </div>
+  <div className="card text-white bg-info mb-3">
+    <div className="card-body">
+      <h5 className="card-title">Science</h5>
+      <div>
+          <ProgressBar variant="success" now={100} label={`${100}%`} />
+      </div>
+      <p className="card-text">Due: Aug. 13, 2020</p>
+    </div>
+  </div>
+</div>
 </div>
 
         )
