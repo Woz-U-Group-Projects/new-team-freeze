@@ -147,3 +147,19 @@ button {
   text-align: left;
   
 }
+/* -------- Parent page/Child Tabs ------- */
+.text-center {
+  display: flex;
+  justify-content: center;
+
+}
+.nav {
+  background-color: rgb(26, 121, 165);
+}
+
+.nav-item {
+  background-color: rgb(26, 121, 165);
+}
+ .nav-link {
+   background-color: rgba(211, 208, 208, 0.932);
+ }
