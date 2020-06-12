@@ -1,10 +1,17 @@
 import React from 'react';
 import axios from "axios";
-import { 
+import {
     // BrowserRouter as Router, 
-    Link, 
+    Link,
     // Route 
 } from "react-router-dom";
+
+import { Tabs, Tab } from 'react-bootstrap-tabs';
+import Math from "./Math";
+import Reading from "./Reading";
+import SocialStudies from "./SocialStudies";
+import Science from "./Science";
+
 
 
 
@@ -12,7 +19,14 @@ import {
 class Gradebook extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { gradebook: [] };
+        this.state = {
+            gradebook: [
+                { id: 1, name: 'Thomas', Math: "In_Progress", Reading: "In_Progress", Social_Studies: "Not_Started", Science: "Not_Started" },
+                { id: 2, name: 'William', Math: "Not_Started", Reading: "In_Progress", Social_Studies: "Not_Started", Science: "Completed" },
+                { id: 3, name: 'Gueniver', Math: "Completed", Reading: "Completed", Social_Studies: "Not_Started", Science: "Completed" },
+                { id: 4, name: 'Molly', Math: "In_Progress", Reading: "Not_Started", Social_Studies: "Not_Started", Science: "Completed" }
+            ]
+        };
         this.taskName = React.createRef();
     }
 
@@ -34,6 +48,8 @@ class Gradebook extends React.Component {
     };
 
 
+
+
     render() {
 
         return (
@@ -48,10 +64,10 @@ class Gradebook extends React.Component {
                         </li>
                         <li>
                             <Link to="/CreateLesson">Create Lesson</Link>
-                        </li>                        
+                        </li>
                         <li>
                             <Link to="/CurrentLessonPlan">Current Lesson Plan</Link>
-                        </li>                        
+                        </li>
                         <li>
                             <Link to="/Gradebook">Grade Book</Link>
                         </li>
@@ -62,8 +78,33 @@ class Gradebook extends React.Component {
                 </div>
                 <div className='center'>
                     <h2>Grade Book</h2>
+                    <hr></hr>
+                    <div className="Tabs">
+                        {/* <Tabs defaultActiveKey="Math" transition={true} id="noanim-tab-example"> */}
+                            <Tabs  onSelect={(index, label) => console.log(label + ' selected')}>
+                            <Tab label="Math" title="Math">
+                                <Math />
+                            </Tab>
+                            <Tab label="Reading" title="Reading">
+                                <Reading />
+                            </Tab>
+                            <Tab label="Social_Studies" title="Social Studies">
+                                <SocialStudies />
+                            </Tab>
+                            <Tab label="Science" title="Science">
+                                <Science />
+                            </Tab>
+                        </Tabs>
+                        <div>
+                            {/* <table className="table table-responsive table-striped w-auto">
+                                <tbody>
+                                    <tr>{this.renderTableHeader()}</tr>
+                                    {this.renderTableData()}
+                                </tbody> 
+                            </table>*/}
+                        </div>
+                    </div>
                 </div>
-                <hr></hr>
             </div>
         )
     }

@@ -48,6 +48,10 @@ class App extends React.Component {
             <PrivateRoute path='/Student' component={Student} />
             <PrivateRoute path='/StudentProfile' component={StudentProfile} />
             <PrivateRoute path='/Parent' component={Parent} />
+            <PrivateRoute path='/Math' component={Parent} />
+            <PrivateRoute path='/Reading' component={Parent} />
+            <PrivateRoute path='/SocialStudies' component={Parent} />
+            <PrivateRoute path='/Science' component={Parent} />
           </div>
         </Router>
       </div>

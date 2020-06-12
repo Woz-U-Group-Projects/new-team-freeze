@@ -147,3 +147,12 @@ button {
   text-align: left;
   
 }
+/* --------------gradebook--------------- */
+.nav-tabs {
+  background-color: rgb(65, 154, 177);
+}
+
+.nav-item{ 
+  color: white;
+}
+
