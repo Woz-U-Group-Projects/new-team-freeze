@@ -5,20 +5,22 @@ import {
     Link,
     //  Route
 } from "react-router-dom";
-
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import Button from 'react-bootstrap/Button';
+
 
 class Student extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             student: [
-                { id: "", 
-                coursename: "", 
-                progress: "", 
-                duedate: ""
-               }
-            ] 
+                {
+                    id: "",
+                    coursename: "",
+                    progress: "",
+                    duedate: ""
+                }
+            ]
         };
         this.taskName = React.createRef();
     }
@@ -67,77 +69,91 @@ class Student extends React.Component {
             //create a student dashboard 
             <div className="container">
                 <div>
-                <ul className="header" >
+                    <ul className="header" >
                         <li>
                             <Link to="/Home">Home</Link>
                         </li>
                         <li>
-                        <Link to="/Student">Dashboard</Link>
+                            <Link to="/Student">Student</Link>
                         </li>
                         <li>
-                        <Link to="/StudentProfile">Profile</Link>
+                            <Link to="/StudentProfile">Profile</Link>
                         </li>
 
                         <li>
                             <Link to="/Login">Log Off</Link>
                         </li>
                     </ul>
-                    
-                <div className="center">
 
-                    <h2>Student Page</h2>
-                    <h6>Welcome to At-Home Learning</h6>
+                    <div className="center">
+
+                        <h2>Hello, Kim!</h2>
+                        <h6>Welcome to At-Home Learning</h6>
+                    </div>
+                    <hr></hr>
                 </div>
-                <hr></hr>
-            </div>
-            {/* <div className="" > */}
+                {/* <div className="" > */}
 
-            <table className="table table-responsive table-striped w-auto">
-            <tbody>
-                <tr>{this.renderTableHeader()}</tr>
-                {this.renderTableData()}
-            </tbody>
-        </table>
-        
-<div className="card-group">
-  <div className="card text-white bg-info mb-3">
-    <div className="card-body">
-      <h5 className="card-title">Math</h5>
-      <div>
-          <ProgressBar variant="success" now={25} label={`${25}%`} />
-      </div>
-      <p className="card-text">Due: Aug. 14, 2020</p>
-    </div>
-  </div>
-  <div className="card text-white bg-info mb-3">
-    <div className="card-body">
-      <h5 className="card-title">Reading</h5>
-      <div>
-          <ProgressBar variant="success" now={50} label={`${50}%`} />
-      </div>
-      <p className="card-text">Due: Aug. 14, 2020</p>
-    </div>
-  </div>
-  <div className="card text-white bg-info mb-3">
-    <div className="card-body">
-      <h5 className="card-title">Social Studies</h5>
-      <div>
-          <ProgressBar variant="success" now={70} label={`${70}%`} />
-      </div>
-      <p className="card-text">Due: Aug. 12, 2020</p>
-    </div>
-  </div>
-  <div className="card text-white bg-info mb-3">
-    <div className="card-body">
-      <h5 className="card-title">Science</h5>
-      <div>
-          <ProgressBar variant="success" now={100} label={`${100}%`} />
-      </div>
-      <p className="card-text">Due: Aug. 13, 2020</p>
-    </div>
-  </div>
-</div>
-</div>
+                {/* <table className="table table-responsive table-striped w-auto">
+                    <tbody>
+                        <tr>{this.renderTableHeader()}</tr>
+                        {this.renderTableData()}
+                    </tbody>
+                </table> */}
+
+                <div className="card-deck">
+                    <div className="card border-primary mb-3 max-width: 18rem">
+                        <div className="card-body text-primary">
+                            <div>
+                                <ProgressBar variant="danger" now={25} label={`${25}%`} />
+                            </div>
+                            <hr></hr>
+                            <h4 className="card-title">Math</h4>
+                            <h6 className="card-text">Multiplying Decimals</h6>
+                            <p className="card-text text-danger">Due: Aug. 14, 2020</p>
+                            <Button variant="primary" size="sm">Go to lesson</Button>{' '}
+                        </div>
+                    </div>
+                    <div className="card border-primary mb-3">
+                        <div className="card-body text-primary">
+                            <div>
+                                <ProgressBar variant="warning" now={50} label={`${50}%`} />
+                            </div>
+                            <hr></hr>
+                            <h4 className="card-title">Reading</h4>
+                            <h6 className="card-text">Main Idea</h6>
+                            <p className="card-text text-danger">Due: Aug. 14, 2020</p>
+                            <Button variant="primary" size="sm">Go to lesson</Button>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="card-deck">
+                    <div className="card border-primary mb-3">
+                        <div className="card-body text-primary">
+                            <div>
+                                <ProgressBar variant="success" now={70} label={`${70}%`} />
+                            </div>
+                            <hr></hr>
+                            <h4 className="card-title">Social Studies</h4>
+                            <h6 className="card-text">Industrial Revolution</h6>
+                            <p className="card-text text-danger">Due: Aug. 12, 2020</p>
+                            <Button variant="primary" size="sm">Go to lesson</Button>
+                        </div>
+                    </div>
+                    <div className="card border-primary mb-3">
+                        <div className="card-body text-primary">
+                            <div>
+                                <ProgressBar variant="success" now={100} label={`${100}%`} />
+                            </div>
+                            <hr></hr>
+                            <h4 className="card-title">Science</h4>
+                            <h6 className="card-text">Force and Motion</h6>
+                            <p className="card-text text-danger">Due: Aug. 13, 2020</p>
+                            <Button variant="primary" size="sm">Go to lesson</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         )
     }
