@@ -104,7 +104,7 @@ class Student extends React.Component {
                 <div className="Tabs">
                     <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
                         <Tab label="My Progress">
-
+                    <br></br>
                     <div className="card-deck">
                                 <div className="card border-primary mb-3 max-width: 18rem">
                                     <div className="card-body text-primary">
