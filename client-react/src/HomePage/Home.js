@@ -6,8 +6,11 @@ import {
     Link,
     //  Route
 } from "react-router-dom";
+//import { Laptop } from 'react-bootstrap-icons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { MDBIcon } from "mdbreact";
 
-// import {userService} from "../_services/user.service";
+//import {userService} from "../_services/user.service";
 
 
 
@@ -17,8 +20,10 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         // this.state = { home: [] };
+
+        //userService.getAll()
         this.state = {
-            user: {},
+            firstname: "",
             users: []
         };
 
@@ -89,14 +94,18 @@ class Home extends React.Component {
                                 </ul>
                             } */}
 
-
+                            <div className="center">
                             <h2 className="text-center">Home</h2>
                             <h6 className="text-center">Welcome to the At Home Learning  Portal</h6>
                             <hr></hr>
+
+                            <div className="text-center">
+                            <MDBIcon icon="school" size="10x" className="center" />
+                            </div>
                                      <p>
                                            
                                     </p>           
-
+                                    </div>
 
                         </div>
                     </div >

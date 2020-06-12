@@ -23,7 +23,7 @@ class CurrentLessonPlan extends React.Component {
 
     getData = () => {
         // Java Spring Boot uses port 8080
-        let url = "http://localhost:8080/currentLessonplan";
+        let url = "http://localhost:8080/currentlessonplan";
 
         // C# dotnetcore uses port 5000
         //let url = "http://localhost:5000/projects";
@@ -62,8 +62,29 @@ class CurrentLessonPlan extends React.Component {
                 </div>
                 <div className='center'>
                     <h2>Current Lesson Page</h2>
+                   
                 </div>
                 <hr></hr>
+                <div>
+                        <form>
+                            <h3>Question 1. When did World War II take place?</h3>
+                            <input type="number"/>
+                            <h3>Question 2. What started WWII?</h3>
+                            <input type="text"/>
+                            <h3>Question 3. Who were our allies during this war?</h3>
+                            <input type="text"/>
+                            <h3>Question 4. Who was our President during this war?</h3>
+                            <input type="text"/>
+                            <h3>Question 5. What year did the war end?</h3>
+                            <input type="number"/>
+
+                            <br></br>
+                            <button type="submit"
+                                className="btn btn-primary"
+                              //  onClick={}
+                            >Submit Lesson</button>
+                        </form>
+                        </div>
             </div>
         )
     }

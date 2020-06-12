@@ -6,16 +6,21 @@ import {
     //  Route
 } from "react-router-dom";
 
+import { Tabs, Tab } from 'react-bootstrap-tabs';
+
 class Parent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { parent: [
-            { id: "", 
-                coursename: "", 
-                progress: "", 
-                duedate: ""
-               }
-        ] };
+        this.state = {
+            parent: [
+                {
+                    id: "",
+                    coursename: "",
+                    progress: "",
+                    duedate: ""
+                }
+            ]
+        };
         this.taskName = React.createRef();
     }
 
@@ -63,34 +68,37 @@ class Parent extends React.Component {
             //create a parent dashboard 
             <div className="container">
                 <div>
-                <ul className="header" >
-                    <li>
-                        <Link to="/Home">Home</Link>
-                    </li>
-                    
-                    <li>
-                        <Link to="/">Log Off</Link>
-                    </li>
-                </ul>
+                    <ul className="header" >
+                        <li>
+                            <Link to="/Home">Home</Link>
+                        </li>
 
-                <div className="center">
+                        <li>
+                            <Link to="/">Log Off</Link>
+                        </li>
+                    </ul>
 
-                    <h2>Parent Page</h2>
-                    <h6>Welcome to At-Home Learning</h6>
+                    <div className="center">
+                        <h2>Parent Page</h2>
+                        <h6>Welcome to At-Home Learning</h6>
+                    </div>
+                    <hr></hr>
                 </div>
-                <hr></hr>
+
+
+                <div className="Tabs">
+                    <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
+                        <Tab label="Child1">Child 1 content</Tab>
+                        <Tab label="Child2">Child 2 content</Tab>
+                    </Tabs>
+                    <table className="table table-responsive table-striped w-auto">
+                        <tbody>
+                            <tr>{this.renderTableHeader()}</tr>
+                            {this.renderTableData()}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            {/* <div className="" > */}
-
-            <table className="table table-responsive table-striped w-auto">
-            <tbody>
-                <tr>{this.renderTableHeader()}</tr>
-                {this.renderTableData()}
-            </tbody>
-        </table>
-    {/* </div> */}
-
-</div>
 
         )
     }
