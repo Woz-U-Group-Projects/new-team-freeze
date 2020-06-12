@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
-
+import { Tabs, Tab } from 'react-bootstrap-tabs';
 
 class Student extends React.Component {
     constructor(props) {
@@ -101,57 +101,65 @@ class Student extends React.Component {
                     </tbody>
                 </table> */}
 
-                <div className="card-deck">
-                    <div className="card border-primary mb-3 max-width: 18rem">
-                        <div className="card-body text-primary">
-                            <div>
-                                <ProgressBar variant="danger" now={25} label={`${25}%`} />
-                            </div>
-                            <hr></hr>
-                            <h4 className="card-title">Math</h4>
-                            <h6 className="card-text">Multiplying Decimals</h6>
-                            <p className="card-text text-danger">Due: Aug. 14, 2020</p>
-                            <Button variant="primary" size="sm">Go to lesson</Button>{' '}
-                        </div>
-                    </div>
-                    <div className="card border-primary mb-3">
-                        <div className="card-body text-primary">
-                            <div>
-                                <ProgressBar variant="warning" now={50} label={`${50}%`} />
-                            </div>
-                            <hr></hr>
-                            <h4 className="card-title">Reading</h4>
-                            <h6 className="card-text">Main Idea</h6>
-                            <p className="card-text text-danger">Due: Aug. 14, 2020</p>
-                            <Button variant="primary" size="sm">Go to lesson</Button>
-                        </div>
-                    </div>
-                    </div>
+                <div className="Tabs">
+                    <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
+                        <Tab label="My Progress">
+
                     <div className="card-deck">
-                    <div className="card border-primary mb-3">
-                        <div className="card-body text-primary">
-                            <div>
-                                <ProgressBar variant="success" now={70} label={`${70}%`} />
+                                <div className="card border-primary mb-3 max-width: 18rem">
+                                    <div className="card-body text-primary">
+                                        <div>
+                                            <ProgressBar variant="danger" now={25} label={`${25}%`} />
+                                        </div>
+                                        <hr></hr>
+                                        <h4 className="card-title">Math</h4>
+                                        <h6 className="card-text">Multiplying Decimals</h6>
+                                        <p className="card-text text-danger">Due: Aug. 14, 2020</p>
+                                        <Button variant="primary" size="sm">Go to lesson</Button>{' '}
+                                    </div>
+                                </div>
+                                <div className="card border-primary mb-3">
+                                    <div className="card-body text-primary">
+                                        <div>
+                                            <ProgressBar variant="warning" now={50} label={`${50}%`} />
+                                        </div>
+                                        <hr></hr>
+                                        <h4 className="card-title">Reading</h4>
+                                        <h6 className="card-text">Main Idea</h6>
+                                        <p className="card-text text-danger">Due: Aug. 14, 2020</p>
+                                        <Button variant="primary" size="sm">Go to lesson</Button>
+                                    </div>
+                                </div>
                             </div>
-                            <hr></hr>
-                            <h4 className="card-title">Social Studies</h4>
-                            <h6 className="card-text">Industrial Revolution</h6>
-                            <p className="card-text text-danger">Due: Aug. 12, 2020</p>
-                            <Button variant="primary" size="sm">Go to lesson</Button>
-                        </div>
-                    </div>
-                    <div className="card border-primary mb-3">
-                        <div className="card-body text-primary">
-                            <div>
-                                <ProgressBar variant="success" now={100} label={`${100}%`} />
+                            <div className="card-deck">
+                                <div className="card border-primary mb-3">
+                                    <div className="card-body text-primary">
+                                        <div>
+                                            <ProgressBar variant="success" now={70} label={`${70}%`} />
+                                        </div>
+                                        <hr></hr>
+                                        <h4 className="card-title">Social Studies</h4>
+                                        <h6 className="card-text">Industrial Revolution</h6>
+                                        <p className="card-text text-danger">Due: Aug. 12, 2020</p>
+                                        <Button variant="primary" size="sm">Go to lesson</Button>
+                                    </div>
+                                </div>
+                                <div className="card border-primary mb-3">
+                                    <div className="card-body text-primary">
+                                        <div>
+                                            <ProgressBar variant="success" now={100} label={`${100}%`} />
+                                        </div>
+                                        <hr></hr>
+                                        <h4 className="card-title">Science</h4>
+                                        <h6 className="card-text">Force and Motion</h6>
+                                        <p className="card-text text-danger">Due: Aug. 13, 2020</p>
+                                        <Button variant="primary" size="sm">Go to lesson</Button>
+                                    </div>
+                                </div>
                             </div>
-                            <hr></hr>
-                            <h4 className="card-title">Science</h4>
-                            <h6 className="card-text">Force and Motion</h6>
-                            <p className="card-text text-danger">Due: Aug. 13, 2020</p>
-                            <Button variant="primary" size="sm">Go to lesson</Button>
-                        </div>
-                    </div>
+                        </Tab>
+                        <Tab label="My Grades">My Grades</Tab>
+                    </Tabs>
                 </div>
             </div>
 
