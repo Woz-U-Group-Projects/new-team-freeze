@@ -5,6 +5,7 @@ import {
     Link, 
     // Route 
 } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 
 
@@ -12,7 +13,12 @@ import {
 class CurrentLessonPlan extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { currentLessonPlan: [] };
+
+        this.state = {
+            CurrentLessonPlan:[], 
+            inputValue: "",
+            url:""
+         };
         this.taskName = React.createRef();
     }
 
@@ -33,6 +39,15 @@ class CurrentLessonPlan extends React.Component {
         axios.get(url).then(response => this.setState({ currentLessonPlan: response.data }));
     };
 
+
+    handleChange = (event) =>{
+        this.setState({inputValue : event.target.value})
+    }
+
+    handleSubmit = (data) =>{
+        data.preventDefault();
+        this.setState({url: this.state.inputValue})
+    }
 
     render() {
 
@@ -65,6 +80,19 @@ class CurrentLessonPlan extends React.Component {
                    
                 </div>
                 <hr></hr>
+                                  <div className="video">
+                                  <header className="video-header">
+                                       <div>
+                                           <form onSubmit={this.handleSubmit}>
+                                          <input onChange={this.handleChange} 
+                                          className="form-control m-4" type="text" placeholder="Input video url here."/>
+                                           <button className="btn btn-primary">Play Video</button>
+                                           </form>
+                                      </div> 
+                                      
+                        <ReactPlayer url={this.state.url} control={true} />
+                        </header>
+                      </div>
                 <div>
                         <form>
                             <h3>Question 1. When did World War II take place?</h3>
