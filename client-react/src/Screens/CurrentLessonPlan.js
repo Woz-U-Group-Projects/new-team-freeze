@@ -81,30 +81,35 @@ class CurrentLessonPlan extends React.Component {
                 </div>
                 <hr></hr>
                                   <div className="video">
-                                  <header className="video-header">
-                                       <div>
+                                  <div className="video-header">
+                                       
                                            <form onSubmit={this.handleSubmit}>
-                                          <input onChange={this.handleChange} 
-                                          className="form-control m-4" type="text" placeholder="Input video url here."/>
+                                               <div className="row">
+                                         <input onChange={this.handleChange} 
+                                          className="form-control" type="text" placeholder="Input video url here."/>
+                                          </div>
+                                          <div className="row">
                                            <button className="btn btn-primary">Play Video</button>
-                                           </form>
-                                      </div> 
-                                      
-                        <ReactPlayer url={this.state.url} control={true} />
-                        </header>
+                                           </div>
+                                           <div className="row">     
+                        <ReactPlayer className="form-control rounded"  url={this.state.url} control={true} />
+                        </div>
+                        </form>
+                        </div>
+                        
                       </div>
                 <div>
                         <form>
                             <h3>Question 1. When did World War II take place?</h3>
-                            <input type="number"/>
+                            <input className="form-control sm-8" type="number"/>
                             <h3>Question 2. What started WWII?</h3>
-                            <input type="text"/>
+                            <input className="form-control sm-8" type="text"/>
                             <h3>Question 3. Who were our allies during this war?</h3>
-                            <input type="text"/>
+                            <input className="form-control sm-8" type="text"/>
                             <h3>Question 4. Who was our President during this war?</h3>
-                            <input type="text"/>
+                            <input className="form-control sm-8" type="text"/>
                             <h3>Question 5. What year did the war end?</h3>
-                            <input type="number"/>
+                            <input className="form-control sm-8" type="number"/>
 
                             <br></br>
                             <button type="submit"
