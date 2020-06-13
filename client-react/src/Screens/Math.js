@@ -7,10 +7,10 @@ class Math extends React.Component {
         super(props);
         this.state = {
             gradebook: [
-                { id: 1, name: 'Thomas', addition_and_subtraction: "Completed", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
-                { id: 2, name: 'William', addition_and_subtraction: "Completed", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
-                { id: 3, name: 'Guinevere', addition_and_subtraction: "Completed", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
-                { id: 4, name: 'Molly', addition_and_subtraction: "Completed", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
+                { id: 1, name: 'Thomas', addition_and_subtraction: "98", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
+                { id: 2, name: 'William', addition_and_subtraction: "95", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
+                { id: 3, name: 'Guinevere', addition_and_subtraction: "100", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
+                { id: 4, name: 'Molly', addition_and_subtraction: "97", Multiplication: "In_Progress", multiply_2_digit_numbers: "Not_Started",  },
             ]
         };
         this.taskName = React.createRef();
