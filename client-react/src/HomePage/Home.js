@@ -100,7 +100,10 @@ class Home extends React.Component {
                             <hr></hr>
 
                             <div className="text-center">
-                            <MDBIcon icon="school" size="10x" className="center" />
+                            {/* <MDBIcon icon="school" size="10x" className="center" /> */}
+
+                            <img src="/Images/computer2.png" />
+
                             </div>
                                      <p>
                                            
