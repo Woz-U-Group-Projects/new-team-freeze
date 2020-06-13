@@ -163,3 +163,27 @@ button {
  .nav-link {
    background-color: rgba(211, 208, 208, 0.932);
  }
+
+/*------------Student page--------------*/
+.tabs {
+  color: white;
+}
+
+.card-body-grades {
+  color: black;
+}
+
+.card-title-grades {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.list-group-item-avg {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  background-color: white;
+}

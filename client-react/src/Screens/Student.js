@@ -103,7 +103,7 @@ class Student extends React.Component {
 
                 <div className="Tabs">
                     <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
-                        <Tab label="My Progress">
+                        <Tab label="My Progress" className="tab-text">
                             <br></br>
                             <div className="card-deck">
                                 <div className="card border-primary mb-3 text-center">
@@ -161,22 +161,24 @@ class Student extends React.Component {
                         <Tab label="Math Grades">
                             <div className="card-group">
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Assignment</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Assignment</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">Multiples of 10 Worksheet</li>
+                                        <li className="list-group-item">Multiplying Decimals Quiz</li>
+                                        <li className="list-group-item">Unit Test</li>
+                                        <li className="list-group-item-avg">Average:</li>
                                     </ul>
                                     </div>
                                 </div>
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Grade</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Grade</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">88</li>
+                                        <li className="list-group-item">91</li>
+                                        <li className="list-group-item">84</li>
+                                        <li className="list-group-item">91</li>
                                     </ul>
                                     </div>
                                 </div>
@@ -185,22 +187,24 @@ class Student extends React.Component {
                         <Tab label="Reading Grades">
                             <div className="card-group">
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Assignment</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Assignment</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">Vocabulary Quiz</li>
+                                        <li className="list-group-item">Main Idea Activity #1</li>
+                                        <li className="list-group-item">Main Idea Exam</li>
+                                        <li className="list-group-item-avg">Average:</li>
                                     </ul>
                                     </div>
                                 </div>
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Grade</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Grade</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">95</li>
+                                        <li className="list-group-item">93</li>
+                                        <li className="list-group-item">97</li>
+                                        <li className="list-group-item">95</li>
                                     </ul>
                                     </div>
                                 </div>
@@ -209,22 +213,24 @@ class Student extends React.Component {
                         <Tab label="Social Studies Grades">
                             <div className="card-group">
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Assignment</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Assignment</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">Matching Activity #1</li>
+                                        <li className="list-group-item">Vocabulary Worksheet</li>
+                                        <li className="list-group-item">Unit Test 1</li>
+                                        <li className="list-group-item-avg">Average:</li>
                                     </ul>
                                     </div>
                                 </div>
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Grade</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Grade</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">92</li>
+                                        <li className="list-group-item">89</li>
+                                        <li className="list-group-item">76</li>
+                                        <li className="list-group-item">86</li>
                                     </ul>
                                     </div>
                                 </div>
@@ -233,22 +239,24 @@ class Student extends React.Component {
                         <Tab label="Science Grades">
                             <div className="card-group">
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Assignment</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Assignment</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">Push or Pull Worksheet</li>
+                                        <li className="list-group-item">Newton's Laws of Motion Quiz</li>
+                                        <li className="list-group-item">Vocabulary Test</li>
+                                        <li className="list-group-item-avg">Average:</li>
                                     </ul>
                                     </div>
                                 </div>
                                 <div className="card">
-                                    <div className="card-body">
-                                    <div className="card-title">Grade</div>
+                                    <div className="card-body-grades">
+                                    <div className="card-title-grades">Grade</div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                        <li className="list-group-item">85</li>
+                                        <li className="list-group-item">72</li>
+                                        <li className="list-group-item">88</li>
+                                        <li className="list-group-item">82</li>
                                     </ul>
                                     </div>
                                 </div>
