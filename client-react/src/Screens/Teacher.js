@@ -62,7 +62,7 @@ class Teacher extends React.Component {
                     <td>{id}</td>
                     <td>{firstname}</td>
                     <td>{lastname}</td>
-                    <td>{math}</td>
+                    <td>{math }</td>
                     <td>{reading}</td>
                     <td>{social_studies}</td>
                     <td>{science}</td>
