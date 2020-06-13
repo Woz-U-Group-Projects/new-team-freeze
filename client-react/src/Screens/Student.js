@@ -104,61 +104,157 @@ class Student extends React.Component {
                 <div className="Tabs">
                     <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
                         <Tab label="My Progress">
-                    <br></br>
-                    <div className="card-deck">
-                                <div className="card border-primary mb-3 max-width: 18rem">
+                            <br></br>
+                            <div className="card-deck">
+                                <div className="card border-primary mb-3 text-center">
                                     <div className="card-body text-primary">
                                         <div>
                                             <ProgressBar variant="danger" now={25} label={`${25}%`} />
                                         </div>
                                         <hr></hr>
                                         <h4 className="card-title">Math</h4>
-                                        <h6 className="card-text">Multiplying Decimals</h6>
+                                        <h5 className="card-text">"Multiplying Decimals"</h5>
                                         <p className="card-text text-danger">Due: Aug. 14, 2020</p>
                                         <Button variant="primary" size="sm">Go to lesson</Button>{' '}
                                     </div>
                                 </div>
-                                <div className="card border-primary mb-3">
+                                <div className="card border-primary mb-3 text-center">
                                     <div className="card-body text-primary">
                                         <div>
                                             <ProgressBar variant="warning" now={50} label={`${50}%`} />
                                         </div>
                                         <hr></hr>
                                         <h4 className="card-title">Reading</h4>
-                                        <h6 className="card-text">Main Idea</h6>
+                                        <h5 className="card-text">"Main Idea"</h5>
                                         <p className="card-text text-danger">Due: Aug. 14, 2020</p>
                                         <Button variant="primary" size="sm">Go to lesson</Button>
                                     </div>
                                 </div>
                             </div>
                             <div className="card-deck">
-                                <div className="card border-primary mb-3">
+                                <div className="card border-primary mb-3 text-center">
                                     <div className="card-body text-primary">
                                         <div>
                                             <ProgressBar variant="success" now={70} label={`${70}%`} />
                                         </div>
                                         <hr></hr>
                                         <h4 className="card-title">Social Studies</h4>
-                                        <h6 className="card-text">Industrial Revolution</h6>
+                                        <h5 className="card-text">"Industrial Revolution"</h5>
                                         <p className="card-text text-danger">Due: Aug. 12, 2020</p>
                                         <Button variant="primary" size="sm">Go to lesson</Button>
                                     </div>
                                 </div>
-                                <div className="card border-primary mb-3">
+                                <div className="card border-primary mb-3 text-center">
                                     <div className="card-body text-primary">
                                         <div>
                                             <ProgressBar variant="success" now={100} label={`${100}%`} />
                                         </div>
                                         <hr></hr>
                                         <h4 className="card-title">Science</h4>
-                                        <h6 className="card-text">Force and Motion</h6>
+                                        <h5 className="card-text">"Force and Motion"</h5>
                                         <p className="card-text text-danger">Due: Aug. 13, 2020</p>
                                         <Button variant="primary" size="sm">Go to lesson</Button>
                                     </div>
                                 </div>
                             </div>
                         </Tab>
-                        <Tab label="My Grades">My Grades</Tab>
+                        <Tab label="Math Grades">
+                            <div className="card-group">
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Assignment</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Grade</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Tab >
+                        <Tab label="Reading Grades">
+                            <div className="card-group">
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Assignment</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Grade</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Tab >
+                        <Tab label="Social Studies Grades">
+                            <div className="card-group">
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Assignment</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Grade</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Tab >
+                        <Tab label="Science Grades">
+                            <div className="card-group">
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Assignment</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <div className="card-body">
+                                    <div className="card-title">Grade</div>
+                                    <ul className="list-group list-group-flush">
+                                        <li className="list-group-item">Cras justo odio</li>
+                                        <li className="list-group-item">Dapibus ac facilisis in</li>
+                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Tab >
+                        
                     </Tabs>
                 </div>
             </div>
