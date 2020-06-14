@@ -11,7 +11,15 @@ import {
 class StudentProfile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { studentprofile: [] };
+        this.state = {
+             studentprofile: [
+               { id: "", 
+                firstname: "", 
+                lastname: "",
+                username: "",
+                gradein: ""}
+      ]
+     };
         this.taskName = React.createRef();
     }
 
@@ -30,6 +38,29 @@ class StudentProfile extends React.Component {
         // let url = "http://localhost:3001/tasks";
         axios.get(url).then(response => this.setState({ studentprofile: response.data }));
     };
+
+
+    renderTableHeader() {
+        let header = Object.keys(this.state.studentprofile[0])
+        return header.map((key, index) => {
+            return <th key={index}>{key.toUpperCase()}</th>
+        })
+    }
+
+    renderTableData() {
+        return this.state.studentprofile.map((studentprofile, index) => {
+            const { id, firstname, lastname, username, gradein } = studentprofile //destructuring
+            return (
+                <tr key={id}>
+                    <td>{id}</td>
+                    <td>{firstname}</td>
+                    <td>{lastname}</td>
+                    <td>{username}</td>
+                    <td>{gradein}</td>
+                </tr>
+            )
+        })
+    }
 
     render() {
 
@@ -52,6 +83,27 @@ class StudentProfile extends React.Component {
                 </div>
                 <div className='center'>
                     <h2>Student Profile</h2>
+                </div>
+                <div>
+                <table className="table table-responsive table-striped w-auto">
+                            <tbody>
+                                <tr>{this.renderTableHeader()}</tr>
+                                {this.renderTableData()}
+                            </tbody>
+                        </table>
+                    <form>
+                        <ul>        
+                <input className="form-control sm-8" type="text"placeholder="change first name"/>           
+                <input className="form-control sm-8" type="text"placeholder="change last name"/>           
+                <input className="form-control sm-8" type="text"placeholder="change username"/>          
+                <input className="form-control sm-8" type="number"placeholder="change grade"/>
+                </ul>
+                <button type="submit"
+                                className="btn btn-primary"
+                              //  onClick={}
+                            >Submit</button>
+                          </form>  
+                        
                 </div>
             </div>
         )
