@@ -97,7 +97,7 @@ li a:hover {
 
 /* ----------- Registration Page/User.js ----------- */
 
-.form-group {
+.form-row {
   display: flex;
   justify-content: center;
   align-items: center;
