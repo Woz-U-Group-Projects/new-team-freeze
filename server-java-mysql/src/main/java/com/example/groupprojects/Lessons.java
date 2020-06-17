@@ -8,16 +8,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "currentlessonplan")
-public class CurrentLessonPlan {
+@Table(name = "lessons")
+public class Lessons {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column(name = "lessons")
-	private String lessons;
+	@Column(name = "lesson")
+	private String lesson;
 
 	public Long getId() {
 		return id;
@@ -27,12 +27,12 @@ public class CurrentLessonPlan {
 		this.id = id;
 	}
 
-	public String getLessons() {
-		return lessons;
+	public String getLesson() {
+		return lesson;
 	}
 
-	public void setLessons(String lessons) {
-		this.lessons = lessons;
+	public void setLesson(String lesson) {
+		this.lesson = lesson;
 	}
 	
 }

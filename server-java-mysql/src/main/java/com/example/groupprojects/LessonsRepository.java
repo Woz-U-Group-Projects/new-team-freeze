@@ -2,6 +2,6 @@ package com.example.groupprojects;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CurrentLessonPlanRepository extends JpaRepository<CurrentLessonPlan, Long>{
+public interface LessonsRepository extends JpaRepository<Lessons, Long>{
 
 }
