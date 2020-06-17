@@ -66,7 +66,7 @@ class Gradebook extends React.Component {
                             <Link to="/CreateLesson">Create Lesson</Link>
                         </li>
                         <li>
-                            <Link to="/CurrentLessonPlan">Current Lesson Plan</Link>
+                            <Link to="/Lessons">Lessons</Link>
                         </li>
                         <li>
                             <Link to="/Gradebook">Grade Book</Link>

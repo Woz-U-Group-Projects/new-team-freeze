@@ -65,7 +65,7 @@ class Lessons extends React.Component {
                             <Link to="/CreateLesson">Create Lesson</Link>
                         </li>                        
                         <li>
-                            <Link to="/Lessons">Current Lesson Plan</Link>
+                            <Link to="/Lessons">Lessons</Link>
                         </li>                        
                         <li>
                             <Link to="/Gradebook">Grade Book</Link>

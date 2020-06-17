@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from "axios";
 // import CreateLesson from './CreateLesson'
-// import CurrentLessonPlan from './CurrentLessonPlan'
+// import Lessons from './Lessons'
 // import Gradebook from './Gradebook'
 import {
     // BrowserRouter as Router, 
@@ -89,7 +89,7 @@ class Teacher extends React.Component {
                             <Link to="/CreateLesson">Create Lesson</Link>
                         </li>
                         <li>
-                            <Link to="/CurrentLessonPlan">Current Lesson Plan</Link>
+                            <Link to="/Lessons">Lessons</Link>
                         </li>
                         <li>
                             <Link to="/Gradebook">Grade Book</Link>
