@@ -5,7 +5,7 @@ import Login from './LoginPage/Login';
 import Register from './Screens/Register';
 import Teacher from './Screens/Teacher';
 import CreateLesson from './Screens/CreateLesson';
-import CurrentLessonPlan from './Screens/CurrentLessonPlan';
+import Lessons from './Screens/Lessons';
 import Gradebook from './Screens/Gradebook';
 import Student from './Screens/Student';
 import {
@@ -43,7 +43,7 @@ class App extends React.Component {
             <Route path='/Register' component={Register} />
             <PrivateRoute path='/Teacher' component={Teacher} />
             <PrivateRoute path='/CreateLesson' component={CreateLesson} />
-            <PrivateRoute path='/CurrentLessonPlan' component={CurrentLessonPlan} />
+            <PrivateRoute path='/Lessons' component={Lessons} />
             <PrivateRoute path='/Gradebook' component={Gradebook} />
             <PrivateRoute path='/Student' component={Student} />
             <PrivateRoute path='/StudentProfile' component={StudentProfile} />
